@@ -20,6 +20,14 @@ public class Palindrome {
         return true;
     }
 
+    public boolean isPalindromeUsingStringBuffer(String str) {
+        if (str.isEmpty() || str.isBlank()) {
+            throw new RuntimeException("String cannot be Empty or Blank");
+        }
+        StringBuffer sb = new StringBuffer(str);
+        return str.equalsIgnoreCase(sb.reverse().toString());
+    }
+
     public static void main(String[] args) {
         String str = new Scanner(System.in).nextLine();
         Palindrome palindrome = new Palindrome();
