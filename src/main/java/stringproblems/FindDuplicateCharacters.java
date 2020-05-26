@@ -2,8 +2,8 @@ package stringproblems;
 
 import java.util.HashMap;
 import java.util.Map;
-
-public class DuplicateCharacterInString {
+// https://www.java67.com/2014/03/how-to-find-duplicate-characters-in-String-Java-program.html
+public class FindDuplicateCharacters {
 
     public String duplicateString(String str) {
         Map<Character, Integer> map = new HashMap<>();
@@ -23,7 +23,7 @@ public class DuplicateCharacterInString {
     }
 
     public static void main(String[] args) {
-        DuplicateCharacterInString d = new DuplicateCharacterInString();
+        FindDuplicateCharacters d = new FindDuplicateCharacters();
         String result = d.duplicateString("Java");
         System.out.println(result);
         result = d.duplicateString("fbfb");
