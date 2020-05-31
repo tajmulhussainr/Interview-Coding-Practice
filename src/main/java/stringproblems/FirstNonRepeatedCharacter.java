@@ -2,7 +2,7 @@ package stringproblems;
 
 import java.util.HashMap;
 import java.util.Map;
-
+// https://javarevisited.blogspot.com/2014/03/3-ways-to-find-first-non-repeated-character-String-programming-problem.html
 public class FirstNonRepeatedCharacter {
     public static char firstNonRepeatedCharacter(String str) {
         Map<Character, Integer> map = new HashMap<>();
