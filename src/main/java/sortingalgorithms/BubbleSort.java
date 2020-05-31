@@ -1,6 +1,13 @@
 package sortingalgorithms;
 //https://mkyong.com/java/java-bubble-sort-example/
-public class BubbleSort extends PrintArray {
+// https://www.youtube.com/watch?v=xli_FI7CuzA
+/* pseudo code
+    for(int i=0; i<n; i++)
+        for(int j=1; j<n-1; j++)
+            if(a[j-1] > arr[j]
+                swap(a[j-1], a[j])
+ */
+public class BubbleSort extends ArrayHelpers {
 
     public int[] sort(int[] arr) {
         int length = arr.length;
@@ -11,17 +18,15 @@ public class BubbleSort extends PrintArray {
             is_sorted = true;
             for(int j=1; j<length-i; j++) {
                 if(arr[j-1] > arr[j]) {
-                    temp = arr[j-1];
-                    arr[j-1] = arr[j];
-                    arr[j] = temp;
+                    swap(arr,j-1, j);
                     is_sorted = false;
                 }
             }
             if (is_sorted) {
-                System.out.println("array is sorted at iteration " + i);
+                System.out.println("array completed sorting at the end of iteration " + i);
                 break;
             } else {
-                System.out.println("array at the end of iteration " + i);
+                System.out.println("partially sorted array at the end of iteration " + i);
                 print(arr);
             }
         }
